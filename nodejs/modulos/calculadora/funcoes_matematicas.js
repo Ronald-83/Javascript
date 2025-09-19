@@ -1,25 +1,22 @@
-function soma(a, b) {
-	return a + b;
+export function soma(a, b, c) {
+	return a + b + c;
 }
 
-function idade(b) {
+export function idade(b) {
 	return 2025 - b;
 }
 
-function multiplica(a, b) {
+export function diminui(a, b) {
+	return a - b;
+}
+
+export function multiplica(a, b) {
 	return a * b;
 }
 
-function divide(a, b) {
+export function divide(a, b) {
 	if (b === 0) {
 		throw new Error('Divisão por zero não é permitida.');
 	}
 	return a / b;
 }
-
-module.exports = {
-	soma,
-	idade,
-	multiplica,
-	divide
-};

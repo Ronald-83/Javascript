@@ -1,4 +1,4 @@
-const os = require('os');//importa o módulo nativo do sistema operacional
+import os from 'os';
 
 console.log('Arquitetura do sistema:', os.arch());//exibe a arquitetura do sistema
 console.log('Quantidade de CPUs', os.cpus().length);//exibe a quantidade de CPUs
