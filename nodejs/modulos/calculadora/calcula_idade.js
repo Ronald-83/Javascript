@@ -1,4 +1,4 @@
-export function calculaIdade(anoNascimento) {
-    const anoAtual = new Date().getFullYear();
-    return anoAtual - anoNascimento;
+export function calculaIdade(anoNascimento, anoAtual, nome) {
+    const idade = anoAtual - anoNascimento;
+    return `Ola ${nome}! Em ${anoAtual} você terá ${idade} anos!`;
 }

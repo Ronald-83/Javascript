@@ -6,4 +6,4 @@ console.log('Subtração =', diminui(5, 2));
 console.log('Multiplicação =', multiplica(4, 3));
 console.log('Divisão =', divide(10, 2));
 
-console.log('Sua idade =', idade.calculaIdade(1982));
+console.log('Sua idade =', idade.calculaIdade(1920, 2025, 'João'));
