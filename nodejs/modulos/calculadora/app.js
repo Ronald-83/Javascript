@@ -1,9 +1,12 @@
-import {soma, diminui, multiplica, divide} from './funcoes_matematicas.js';
-import * as idade from './calcula_idade.js';
+//const funcoesMatematicas = require('./funcoes_matematicas');
+import {somar,subtrair,multiplicar,dividir} from './modulos/funcoes_matematicas.js';
+import * as calculadora_idade from './modulos/calculadora_idade.js';
 
-console.log('Soma =', soma(2, 3, 4));
-console.log('Subtração =', diminui(5, 2));
-console.log('Multiplicação =', multiplica(4, 3));
-console.log('Divisão =', divide(10, 2));
 
-console.log('Sua idade =', idade.calculaIdade(1920, 2025, 'João'));
+// Exemplo de uso:
+console.log("Soma: " + somar(2, 3));
+console.log("Subtração: " + subtrair(5, 2));
+console.log("Multiplicação: " + multiplicar(4, 6));
+console.log("Divisão: " + dividir(10, 2));
+
+console.log(calculadora_idade.calcularIdade("João", 1912, 2025));

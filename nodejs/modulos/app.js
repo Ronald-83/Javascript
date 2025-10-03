@@ -1,4 +1,4 @@
-import { saudacao } from './meuModulo.js'; // Importando a função do módulo
+const saudacao = require('./meuModulo'); // Importando o módulo
 
-const mensagem = saudacao('Joédio'); // Executando a função
+const mensagem = saudacao('Erick'); // Executando a função
 console.log(mensagem);
