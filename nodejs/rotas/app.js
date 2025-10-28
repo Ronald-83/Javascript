@@ -1,40 +1,39 @@
-//importa o modulo http nativo do nodejs
-import { stat } from 'fs';
+// Importa o módulo htp nativo do Node.js
 import http from 'http';
 
 const PORT = 3000;
 
-//cria o servidor
-const server = http.createServer((req, res) => {
-    const url = req.url;
-    const method = req.method;
+// Cria o servidor
+const server = http.createServer((request, response) => {
+    const url = request.url;
+    const method = request.method;
 
-    //define o cabeçalho da resposta
-    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    //Define o cabeçalho da resposta como HTML
+    response.setHeader('Content-Type', 'text/html; charset=utf-8');
 
+    // Roteamento básico
     if (url === '/') {
-        res.statusCode = 200;
-        res.end('<h1>Home Page</h1>');
+        response.statusCode = 200; // OK
+        response.end('<h1>Página Inicial</h1>');
 
     } else if (url === '/sobre' && method === 'GET') {
-        res.statusCode = 200;
-        res.end('<h1>Sobre Nós</h1>');
-        
-    } else if (url === '/contato') {
-        res.statusCode = 200;
-        res.end('<h1>fale conosco</h1>');
+        response.statusCode = 200; // OK
+        response.end('<h1>Sobre Nós</h1><p>Esta é uma aplicação de exemplo com Node.js puro.</p>');
 
+    } else if (url === '/contato') {
+        response.statusCode = 200; // OK
+        response.end('<h1>Fale Conosco</h1>');
     } else if (url === '/fotos') {
-        res.statusCode = 200;
-        res.end('<h1>fotos</h1>');
-        
+        response.statusCode = 200; // OK
+        response.end('<h1>Imagens.png</h1>');
     } else {
-        res.statusCode = 404;
-        res.end('<h1>Pagina não encontrada</h1>');
+        // Se nenhuma rota corresponder
+        response. statusCode = 404 // Not Found
+        response.end('<h1>404 - Página Não Encontrada<h1>');
     }
 });
 
-//define a porta e o host do servidor
-server.listen(PORT, 'localhost', () => {
+// Inicia o servidor para ouvir na porta definida
+server.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
-});    
+});

@@ -1,7 +1,3 @@
-export function calcularIdade(anoAtual, anoNasc) {
-    return anoAtual - anoNasc;
-}
-
 export function somar(a, b) {
     return a + b;
 }

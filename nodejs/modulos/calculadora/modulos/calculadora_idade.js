@@ -1,4 +1,4 @@
-export function calcularIdade(nome, anoNascimento, anoAtual) {
-    calcularIdade = anoAtual - anoNascimento;
-    return `Olá, ${nome}! Em ${anoAtual}, você terá ${calcularIdade} anos!`;
+export function idade(nome,anoNasc,anoAtual){
+    idade = anoAtual - anoNasc;
+    return `Olá, ${nome}! Em ${anoAtual} você terá ${idade} anos!`
 }

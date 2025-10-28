@@ -1,15 +1,16 @@
-//Importa o módulo nativo 'os' do Node.js.
+// Importando o módulo 'os' para obter informações do sistema operacional
 //const os = require('os');
+
 import os from 'os';
 
-//Exibe informações sobre o sistema operacional no console.
-//Exibe a arquitetura do sistema.
-console.log('Arquitetura do sistema:', os.arch());
-//Exibe a quantidade de CPUs.
-console.log('Quantidade de CPUs:', os.cpus().length);
-//Exibe o total de memória em bytes.
-console.log('Memória total (bytes):', os.totalmem());
-//Exibe a memória livre em bytes.
-console.log('Memória livre (bytes):', os.freemem());
-//Exibe o sistema operacional.
+// exibindo informações do sistema operacional
+// exibindo a arquitetura do sistema
+console.log('Arquitetura do sistema:',os.arch()); 
+// exibindo a quantidade de núcleos da CPU
+console.log('Quantidade de CPUs:',os.cpus().lenght);
+// exibindo a quantidade de memória total, em bytes
+console.log('Memória total (bytes)',os.totalmem());
+// exibindo a memória livre do sistema, em bytes
+console.log('Memória livre (bytes)',os.freemem());
+// exibindo a plataforma do sistema operacional
 console.log(os.platform());

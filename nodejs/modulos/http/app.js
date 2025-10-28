@@ -1,13 +1,13 @@
-// Importa o módulo 'http' nativo do Node.js
+// importando o módulo http
 //const http = require('http');
+
 import http from 'http';
 
-// Cria um servidor HTTP
+// criando um servidor HTTP
 http.createServer((req, res) => {
-    // Define o status da resposta como 200 (OK) e o tipo de conteúdo como texto simples
+    // definindo o cabeçalho da resposta HTTP
     res.writeHead(200, {'Content-Type': 'text/plain'});
-    // Envia o texto 'Hello World' como resposta e finaliza a conexão
+    // enviando a resposta "Hello World" para o cliente
     res.end('Hello World\n');
-    // Inicia o servidor na porta 3000
-}).listen(3000);
-console.log('Servidor rodando em http://localhost:3000/');
+}).listen(8080); // o servidor escuta na porta 8080
+console.log("Servidor rodando em http://localhost:8080/")

@@ -12,6 +12,6 @@ module.exports = {
       faixaEtaria = "idoso";
     }
 
-    return `Olá, ${nome}! Você é um(a) ${faixaEtaria} que torce para o/a ${time}.`;
+    return `Olá, ${nome}! Você é um(a) ${faixaEtaria} e é torcedor(a) do ${time}`;
   }
 };
